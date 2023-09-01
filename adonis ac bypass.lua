@@ -1,3 +1,4 @@
+repeat task.wait() until game:IsLoaded()
 
 local function isAdonisAC(table) -- stupid check
 	return rawget(table, "Detected") and typeof(rawget(table, "Detected")) == "function" and rawget(table, "RLocked")
@@ -22,6 +23,7 @@ for _, v in next, getgc(true) do
 					return task.wait(9e9)
 				end)
 				warn("bypassed adonis ac")
+                break
 			end
 		end
 	end
